@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <style>
+<script src="/script.js";>
+  </script>
+
+    <style >
+
 
 .Intro{
     text-align: center;
@@ -19,11 +26,13 @@
 }
 audio{
     position:fixed; bottom:0;
-    width: 5%;
-    height: 5%;
+    width: 10%;
+    height: 10%;
 }
 
      </style>
+
+        
 </head>
 <body background="https://images.alphacoders.com/198/198683.jpg">
     <div class = "Intro">
@@ -35,9 +44,14 @@ character for your current wants, so just sit back, relax and our wizards will b
 <button> Enter </button>
 </div>
 <audio controls autoplay loop>
-    <source src="Town 1.mp3" type="audio/mpeg">
-    
-  Your browser does not support the audio element.
-  </audio>
+    <source src="Town1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id = "myaudio" controls autoplay loop> 
+        <source src="rain.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio> 
+    <div id="quiz"></div>
+    <button id="submit">Submit Quiz</button>
+    <div id="results"></div>
 </body>
 </html>
