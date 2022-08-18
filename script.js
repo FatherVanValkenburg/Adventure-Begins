@@ -53,3 +53,24 @@
   function displayMessage(){
     document.getElementById("msg").innerHTML = "Ah yes we see it now! you have an adventurers heart! from now on you shall be known as " + (Namesmath, names[random]) + " hold tight to your friends, for you never know how many helping hands you are from oblivion!";
   }
+  var url = "https://www.dnd5eapi.co/api/";
+url += '?' + $.param({
+  'api-key': "11111111111111111111111"
+});
+$.ajax({
+  url: "url",
+  method: 'GET',
+  dataType: 'JSON',
+  success: function(data) {
+    console.log(data)
+  },
+  error: function(err) {
+    console.log('error:' + err)
+  }
+})
+var classes = [url];
+const rado = Math.floor(Math.random() * classes.length);
+const classesmath = Math.floor(Math.random() * classes.length);
+function display(){
+  document.getElementById("nxt").innerHTML = "you have been imbued with the power of the " + (classesmath, classes[random]) + " may you use it well " + (Namesmath, names[random]) + ".";
+  }
