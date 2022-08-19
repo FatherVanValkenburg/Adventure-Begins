@@ -46,31 +46,50 @@
 "Zagaroth Feston",
 "Turrek Esdel"
   ]
-  
+  const dave = ["paladin/","ranger/","cleric/","warlock/","fighter/","wizard/","barbarian/","bard/","druid/","monk/","rogue/","sorcerer/"]
+  const daveradom = Math.floor(Math.random() * dave.length);
+  const classesmath = Math.floor(Math.random() * dave.length);
+
   const random = Math.floor(Math.random() * names.length);
   const Namesmath = Math.floor(Math.random() * names.length);
 
   function displayMessage(){
     document.getElementById("msg").innerHTML = "Ah yes we see it now! you have an adventurers heart! from now on you shall be known as " + (Namesmath, names[random]) + " hold tight to your friends, for you never know how many helping hands you are from oblivion!";
   }
-  var url = "https://www.dnd5eapi.co/api/";
+
+  var url = "https://www.dnd5eapi.co/api/classes/" + dave[daveradom]
 url += '?' + $.param({
-  'api-key': "11111111111111111111111"
+  'api-key': "11111111111111111111112"
 });
-$.ajax({
-  url: "url",
+ $.ajax({
+  url: url,
   method: 'GET',
   dataType: 'JSON',
   success: function(data) {
-    console.log(data)
+    n = []
+  $.map(["item1","item2","item3"], function(n){
+    var li = document.createElement ( 'li' );
+    li.innerHTML = n;
+    ul.appendChild ( li );
+    return li;
+    console.log(n)
+});
+
   },
   error: function(err) {
     console.log('error:' + err)
   }
+  
 })
-var classes = [url];
-const rado = Math.floor(Math.random() * classes.length);
-const classesmath = Math.floor(Math.random() * classes.length);
+
 function display(){
-  document.getElementById("nxt").innerHTML = "you have been imbued with the power of the " + (classesmath, classes[random]) + " may you use it well " + (Namesmath, names[random]) + ".";
+  document.getElementById("nxt").innerHTML = "You have been imbued with the power of the " + (dave[daveradom]) + " may you use it well " + (Namesmath, names[random]) + ".";
   }
+
+  const weapons = Math.floor(Math.random() * names.length);
+  const weaponsmath = Math.floor(Math.random() * names.length);
+
+  function give(){
+    document.getElementById("tnt").innerHTML = "This is all I have to give you for now, but maybe return back every once in awhile, I have heard of people changing into strange forms....";
+  }
+
