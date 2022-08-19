@@ -1,4 +1,4 @@
-  const names = [
+const names = [
     "Logen Ninefingers",
 "al'Lan Mandragoran",
 "Jessica Atréides",
@@ -65,23 +65,23 @@ url += '?' + $.param({
   url: url,
   method: 'GET',
   dataType: 'JSON',
-  success: function(data) {
-    n = []
-  $.map(["item1","item2","item3"], function(n){
-    var li = document.createElement ( 'li' );
-    li.innerHTML = n;
-    ul.appendChild ( li );
-    return li;
-    console.log(n)
-});
-
+  data:{"data:":"check"},
+  success: function(response) {
+    const obj = []
+    const myJSON =JSON.stringify(response)
+    console.log(myJSON)
+    var arr = myJSON.split(',');
+console.log(arr[2])
+var arr;
+window.arr2 = arr
   },
   error: function(err) {
     console.log('error:' + err)
-  }
+ }
   
 })
 
+console.log(arr2)
 function display(){
   document.getElementById("nxt").innerHTML = "You have been imbued with the power of the " + (dave[daveradom]) + " may you use it well " + (Namesmath, names[random]) + ".";
   }
@@ -90,6 +90,6 @@ function display(){
   const weaponsmath = Math.floor(Math.random() * names.length);
 
   function give(){
-    document.getElementById("tnt").innerHTML = "This is all I have to give you for now, but maybe return back every once in awhile, I have heard of people changing into strange forms....";
+    document.getElementById("tnt").innerHTML = "you've recieved " + arr2[2] + " This is all I have to give you for now, they are health stones or HIT DIE it will go down every time you take damadge but maybe return back every once in awhile, I have heard of people changing into strange forms....";
   }
 
