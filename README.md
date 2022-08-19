@@ -13,3 +13,5 @@
  
  Future enhancements
 building the actual first level character sheet.
+implimenting the personality quizz
+adding races
